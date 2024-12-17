@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController; // Pastikan ini ditambahkan!
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProductController;
 
 /*
@@ -32,3 +34,11 @@ Route::middleware(['auth:api', 'is_admin'])->group(function () {
     Route::put('/products/{id}', [ProductController::class, 'update']);
     Route::delete('/products/{id}', [ProductController::class, 'destroy']);
 });
+
+Route::middleware(['auth:api'])->group(function () {
+    Route::post('/cart/add', [CartController::class, 'addToCart']);
+    Route::get('/cart', [CartController::class, 'viewCart']);
+    Route::delete('/products/{id}', [CartController::class, 'removeFromCart']);
+});
+
+Route::middleware('auth:api')->post('/checkout', [PaymentController::class, 'checkout']);
