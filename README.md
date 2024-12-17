@@ -74,3 +74,11 @@ This is a simple Laravel-based API for managing products in an e-commerce applic
    - **URL**: /api/products/{id}  
    - **Method**: DELETE  
 
+# License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+# Acknowledgments
+- Laravel Framework
+- Composer for PHP dependency management
+- MySQL for the database
+
