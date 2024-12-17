@@ -23,31 +23,31 @@ This is a simple Laravel-based API for managing products in an e-commerce applic
    git clone https://github.com/your-username/ecommerce-product-api.git
 
 2. Navigate to the project directory:
-```bash
+    ```bash
     cd ecommerce-product-api
 
 3. Install the dependencies using Composer:
-```bash
+    ```bash
     composer install
 
 4. Set up the .env file by copying the .env.example file:
-```bash
+    ```bash
     cp .env.example .env
 
 5. Generate the application key:
-```bash
+    ```bash
     php artisan key:generate
 
 5. Generate the application key:
-```bash
+    ```bash
     php artisan key:generate
 
 6. Set up the database in .env file:
 
 7. Run database migrations:
-```bash
+    ```bash
     php artisan migrate
 
 8. Start the Laravel development server:
-```bash
-php artisan serve
+    ```bash
+    php artisan serve
