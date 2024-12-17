@@ -36,6 +36,8 @@ Route::middleware(['auth:api', 'is_admin'])->group(function () {
 });
 
 Route::middleware(['auth:api'])->group(function () {
+    Route::post('/addProductAdmin', [ProductController::class, 'addProductAdmin'])
+        ->middleware('check.admin');
     Route::post('/cart/add', [CartController::class, 'addToCart']);
     Route::get('/cart', [CartController::class, 'viewCart']);
     Route::delete('/products/{id}', [CartController::class, 'removeFromCart']);
