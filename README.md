@@ -51,3 +51,26 @@ This is a simple Laravel-based API for managing products in an e-commerce applic
 8. Start the Laravel development server:
     ```bash
     php artisan serve
+
+# API Endpoints
+
+1. **Get All Products**  
+   - **URL**: /api/products  
+   - **Method**: GET  
+
+2. **Get a Single Product**  
+   - **URL**: /api/products/{id}  
+   - **Method**: GET  
+
+3. **Create a Product**  
+   - **URL**: /api/products  
+   - **Method**: POST  
+
+4. **Update a Product**  
+   - **URL**: /api/products/{id}  
+   - **Method**: PUT  
+
+5. **Delete a Product**  
+   - **URL**: /api/products/{id}  
+   - **Method**: DELETE  
+
